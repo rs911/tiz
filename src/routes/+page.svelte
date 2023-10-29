@@ -77,7 +77,7 @@
 	for (let i = 0; i < splitTextList.length; i++) {
 		splitTextList[i] = splitTextList[i].replace(/[\r\n\x0B\x0C\u0085\u2028\u2029]+/g, ' ');
 	}
-	console.log(splitTextList.length);
+	console.log(splitTextList.length, ' files');
 
 	let canvasList = [];
 	onMount(() => {

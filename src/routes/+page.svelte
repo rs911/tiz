@@ -3,7 +3,8 @@
 	import JSZip from 'jszip';
 	let zip = new JSZip();
 
-	let mainText = `ॐ ह्रीं अर्हं अमृताय नमः
+	let mainText = `
+	ॐ ह्रीं अर्हं अमृताय नमः
 ।।२५७।।
 ॐ ह्रीं अर्हं हविषे नमः
 ।।२५८।।
@@ -70,14 +71,22 @@
 ॐ ह्रीं अर्हं परंब्रह्मणे नमः
 ।।२८९।।
 ॐ ह्रीं अर्हं ब्रह्मात्मने नमः
-।।२९० ।।`;
-	mainText = mainText.trim();
+।।२९० ।।
 
-	let splitTextList = mainText.split('।।\n');
+
+	`;
+
+	mainText = mainText.trim();
+	mainText += '\n'; //To make sure the last text can be split
+	mainText = mainText.replace(/॥/g, '।।');
+	let splitTextList = mainText.split(/।।\n/g);
+	// console.log(splitTextList[0], splitTextList[2], splitTextList[29]);
 	for (let i = 0; i < splitTextList.length; i++) {
-		splitTextList[i] = splitTextList[i].replace(/[\r\n\x0B\x0C\u0085\u2028\u2029]+/g, ' ');
+		splitTextList[i] = splitTextList[i].replace(/[\r\n\x0B\x0C\u0085\u2028\u2029]+/g, ' ') + '।।';
 	}
-	console.log(splitTextList.length, ' files');
+	// This fixes the last
+	splitTextList.pop();
+	console.log(splitTextList.length + ' files');
 
 	let canvasList = [];
 	onMount(() => {

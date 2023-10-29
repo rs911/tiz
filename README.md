@@ -1,38 +1,12 @@
-# create-svelte
+### References used to create the project
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+Three steps to be followed:
+1. Text to canvas - https://jsfiddle.net/amaan/WxmQR/1/
+2. Canvas to image - https://jsfiddle.net/user2314737/28wqq1gu/
+3. Images to zip - https://stuk.github.io/jszip/
 
-## Creating a project
+https://stackoverflow.com/questions/31305485/export-resized-image-in-canvas-to-new-jszip-package
 
-If you're seeing this, you've probably already done this step. Congrats!
+https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toBlob
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+https://www.programonaut.com/how-to-create-a-download-for-a-zip-file-with-sveltekit-step-by-step/

@@ -94,7 +94,7 @@
 					// anchor.href = URL.createObjectURL(blob);
 					// anchor.click(); //Magic
 					// URL.revokeObjectURL(anchor.href); // remove it from memory and save on memory! 😎
-					let fileName = 'image' + i + '.jpg'; // optional, but you can give the file a name
+					let fileName = 'image' + (i + 1) + '.jpg'; // optional, but you can give the file a name
 					zip.file(fileName, blob);
 				},
 				'image/jpeg',
